@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio – Shayla Hernández</title>
+
+<!-- TIPOGRAFÍAS SIMILARES AL EJEMPLO -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="stiyles.css">
+<style>
+
+
+
+</style>
+
+</head>
+<body>
+<!-- ============================= -->
+<!-- MENÚ DE NAVEGACIÓN -->
+<!-- ============================= -->
+
+<nav class="navbar">
+    <div class="nav-logo">Shayla</div>
+
+    <button class="nav-toggle" id="navToggle">
+        ☰
+    </button>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Sobre mí</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#work">Trabajos</a></li>
+    </ul>
+</nav>
+
+<!-- ============================= -->
+<!-- PORTADA -->
+<!-- ============================= -->
+
+<section class="hero"> 
+        <div class="hero-content">
+
+            <!-- Texto manuscrito -->
+            <p class="text-top left">Bienvenido, </p>
+            <p class="text-top right">
+                Dejame orientarte <br> por este mundito.</p>
+
+                 <!-- Foto -->
+            <img src="img/yooo.png" alt="Foto" class="hero-photo">
+
+            <p class="text-middle">Yo Soy</p>
+
+            
+            <!-- Nombre grande en rosa -->
+            <h1 class="big-name">SHAYLA<br>HERNANDEZ  </h1>
+
+           
+
+            <!-- Texto inferior -->
+            <div class="bottom-left">Diseñadora Gráfca </div>
+            <div class="bottom-right">By Shayla Hernandez</div>
+
+        </div>
+    </section>
+
+<!-- ============================= -->
+<!-- ABOUT ME -->
+<!-- ============================= -->
+
+<section id="about" class="container">
+    <div class="text">
+        <h2>Sobre Mí</h2>
+        <p>
+           Soy estudiante de diseño gráfico enfocada en identidad visual, composición conceptual y arte surrealista.
+           Me gusta crear narrativas visuales que combinen emoción, estética y storytelling.
+        </p>
+        <p>Creo en el diseño como una extensión de la personalidad: curioso, expresivo y profundamente humano.</p>
+    </div>
+
+    <img src="img/Recurso 13.png">
+</section>
+
+<!-- ============================= -->
+<!-- SKILLS / TIMELINE -->
+<!-- ============================= -->
+
+<section id="skills" class="container">
+
+    <div class="columns">
+
+        <!-- Educación -->
+        <div>
+            <h3>Educación</h3>
+            <p>Licenciatura en Diseño Gráfico<br>Universidad Lux (2023–Actualidad)</p>
+            <p>B.T. Diseño y Comunicación Visual<br>Preparatoria #19 UANL</p>
+        </div>
+
+        <!-- Experiencia -->
+        <div>
+            <h3>Experiencia</h3>
+            <p>Revista "Amor Abstracto"<br>Editorial, Dirección de arte</p>
+            <p>Rediseño de manual corporativo<br>Penguin / Petco</p>
+            <p>Invitaciones personalizadas <br>(bodas, XV,cumpleaños)</p>
+        </div>
+
+        <!-- Skills -->
+        <div>
+            <h3>Habilidades</h3>
+
+            Illustrator
+            <div class="skill-bar"><div class="fill" style="width: 85%;"></div></div>
+
+            Photoshop
+            <div class="skill-bar"><div class="fill" style="width: 60%;"></div></div>
+
+            InDesign
+            <div class="skill-bar"><div class="fill" style="width: 40%;"></div></div>
+
+            Canva
+            <div class="skill-bar"><div class="fill" style="width: 90%;"></div></div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ============================= -->
+<!-- PORTAFOLIO -->
+<!-- ============================= -->
+
+<h2 class="big-title" style="font-size:3rem; margin-bottom:40px;">Trabajos</h2>
+
+<section id="work" class="container1">
+    
+
+    <div class="gallery1" onmouseover="showOverlay()" onmouseout="hideOverlay">
+        <img src="img/Recurso 21.png">
+    </div>
+    <div class="gallery2", onmouseover="showOverlay()" onmouseout="hideOverlay">
+        <img src="img/ba6dee8d-d3ee-47b1-99b3-c4a29b096e1e.jfif">
+    </div>
+
+    <div class="gallery3" onmouseover="showOverlay()" onmouseout="hideOverlay">
+        <img src="img/rev.jfif">
+    </div>
+    <div class="gallery4" onmouseover="showOverlay()" onmouseout="hideOverlay">
+        <img src="img/invv.jfif">
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2025 Shayla Hernandez – Portfolio
+</footer>
+
+
+ 
+</body>
+<script>
+    const navToggle = document.getElementById("navToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+</script>
+
+</html>

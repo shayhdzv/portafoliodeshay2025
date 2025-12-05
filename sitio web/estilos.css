@@ -1,0 +1,21 @@
+body {background-color: rgb(245, 144, 186);
+
+}
+h1 {color: rgb(240, 80, 168);
+
+}
+#tay{color: rgb(233, 3, 80);
+
+}
+.todobien {color: #f34960;
+
+}
+ul{
+    list-style: none;
+    display: flex;
+font-size: 300%;
+}
+
+li{margin-left: 5px;
+
+}

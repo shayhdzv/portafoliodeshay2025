@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de [Tu Nombre] - Diseño Gráfico Surrealista</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif; /* Elegant serif for headers */
+            margin: 0;
+            padding: 0;
+          
+             background-image: url(img/d2956921707d91868a79512e8f968412.gif); 
+             
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed; /* Fija la imagen al desplazarse */
+            background-position: center; /* Centra la imagen */
+           
+            color: #12506C;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ajuste para secciones con fondo semi-transparente para legibilidad */
+        .section {
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente para contrastar con la imagen */
+            /* Resto del CSS para .section permanece igual */
+        }
+
+        /* Whimsical Decorative Elements */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+           background-color: rgb(168, 205, 247);
+            background-repeat: no-repeat;
+            background-size: cover;
+            opacity: 0.3;
+            pointer-events: none;
+            animation: float 10s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgb(153, 192, 252);
+            color: #365F6A; /* Soft pink */
+        }
+        h2 {
+            font-family:'bonita2'
+        }
+
+        p, li {
+            font-family: 'Nunito', sans-serif; /* Delicate sans-serif for body */
+            line-height: 1.6;
+        }
+
+        /* Curved Frames and Borders */
+        .section {
+            margin: 50px auto;
+            max-width: 1200px;
+            padding: 40px;
+            border-radius: 50px; /* Rounded corners */
+            border: 5px solid #BFBBD6; /* Baby blue border */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+             background-image: url(img/Recurso\ 33.png)
+        }
+
+        .section::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, #b3c5ff, #0693ff, #ffffba);
+            border-radius: 60px;
+            z-index: -1;
+            opacity: 0.2;
+        }
+
+        /* Bow Motifs */
+        .bow {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 50px;
+            height: 50px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 10 Q20 10 20 50 Q20 90 50 90 Q80 90 80 50 Q80 10 50 10 Z" fill="%23ffb3ba"/><circle cx="50" cy="50" r="10" fill="%23ffffba"/></svg>') no-repeat center;
+            animation: wiggle 3s infinite ease-in-out;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+        }
+
+       
+
+        /* Hero Section */
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            
+            background: rgba(255, 255, 255, 0.267); /* Semi-transparente para que la imagen de fondo se vea */
+            background-image: url(img/Recurso\ 33.png)
+        }
+
+        #hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            color: #EC66A2;
+            font-family:'bolita';
+        }
+
+          @font-face {
+      font-family: 'bolita';
+      src: url('img/CherryBombOne-Regular.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+       @font-face {
+      font-family:'bonita';
+      src: url('img/Montserrat-Italic-VariableFont_wght.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+     @font-face {
+      font-family:'bonita2';
+      src: url('img/Montserrat-VariableFont_wght.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+        #hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+
+        
+
+        /* Progress Bars */
+        .skill-bar {
+            width: 100%;
+            height: 20px;
+            background: #c0dbee;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+
+        .skill-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff8dbc, #008a9c);
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            filter: brightness(1.1) saturate(1.2);
+        }
+
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, #ec98bb, #bae1ff, #ffffba);
+            border-radius: 40px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .programas{
+            font-family: 'bonita'!important;
+        }
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: linear-gradient(45deg, #ffb6da, #bed89c);
+            color: rgb(230, 6, 92);
+            text-decoration: none;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            font-family :'bonita';
+        }
+     
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            #hero h1 {
+                font-size: 2.5rem;
+            }
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="floating-element"></div>
+        <div class="floating-element"></div>
+        <h1>Shayla Alondra Hernandez Vargas</h1>
+        <p>Estudiante de Diseño Gráfico • Conceptual Design • Identidad Corporativa • Arte Surrealista</p>
+        <a href="#sobre-mi" class="btn">Descubre Más</a>
+    </section>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="section">
+    
+        <h2>Sobre mí</h2>
+        <p>Soy estudiante de diseño gráfico enfocada en el diseño conceptual, el desarrollo de identidad corporativa y el arte surrealista. Me interesa crear experiencias visuales que combinen emoción, narrativa y estética.</p>
+       
+    </section>
+
+    <!-- Formación Académica -->
+    <section id="formacion" class="section">
+        
+        <h2>Formación Académica</h2>
+        <ul>
+            <li>Licenciatura en Diseño Gráfico — Universidad Lux (2023–Actualidad)</li>
+            <li>B.T. Diseño y Comunicación Visual — Preparatoria N°19 UANL</li>
+        </ul>
+        
+    </section>
+
+    <!-- Experiencia Relevante -->
+    <section id="experiencia" class="section">
+       
+        <h2>Experiencia Relevante</h2>
+        <ul>
+            <li><strong>Proyecto Universitario “Amor Abstracto”</strong><br>– Creación de revista inspirada en maquillaje surrealista y minimalista<br>– Diseño editorial, redacción de contenidos y propuestas visuales con diferentes retículas</li>
+            <li><strong>Rediseño de manual de identidad corporativa</strong><br>– Penguin Random House<br>– Petco</li>
+            <li><strong>Invitaciones personalizadas para cumpleaños, bodas y diversos festejos</strong></li>
+        </ul>
+       
+    </section>
+
+    <!-- Habilidades Técnicas -->
+    <section id="habilidades" class="section">
+        
+        <h2>Habilidades Técnicas</h2>
+        <div>
+            <p class="programas">Illustrator</p>
+            <div class="skill-bar"><div class="skill-fill" style="width: 83%;"></div></div>
+        </div>
+        <div >
+            <p class="programas">Canva</p>
+            <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+        </div>
+        <div >
+            <p class="programas">Photoshop</p>
+            <div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div>
+        </div>
+        <div >
+            <p class="programas">InDesign</p>
+            <div class="skill-bar"><div class="skill-fill" style="width: 40%;"></div></div>
+        </div>
+        <div class="ribbon"></div>
+    </section>
+
+    <!-- Aptitudes & habiliades -->
+    <section id="aptitudes" class="section">
+        
+        <h2>Aptitudes & Habilidades</h2>
+        <ul>
+            <li>Comunicación efectiva</li>
+            <li>Trabajo en equipo</li>
+            <li>Creatividad conceptual</li>
+            <li>Adaptabilidad</li>
+        </ul>
+        <div class="ribbon"></div>
+    </section>
+
+    <!-- Portafolio / Galería -->
+    <section id="portafolio" class="section">
+        
+        <h2>Portafolio / Galería</h2>
+        <div class="gallery">
+            <!-- Placeholder images; replace with actual portfolio images -->
+            <div class="gallery-item">
+                <img src="img/resvista orig (1).pdf" alt="Revista">
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/250x200/bae1ff/ffffff?text=Proyecto+2" alt="Petco">
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/250x200/ffffba/ffffff?text=Proyecto+3" alt="invitaciones">
+            </div>
+            <!-- Add more as needed -->
+        </div>
+        <div class="ribbon"></div>
+    </section>
+
+    <script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animate skill bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.skill-fill').forEach(fill => {
+                        fill.style.width = fill.style.width; // Trigger animation
+                    });
+                }
+            });
+        });
+        observer.observe(document.getElementById('habilidades'));
+    </script>
+</body>
+</html>

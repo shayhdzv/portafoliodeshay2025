@@ -1,0 +1,485 @@
+/* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7ede5; /* Color beige-gris exterior */
+    font-family: "bonita2";
+}
+body {
+    padding-top: 90px;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #eee;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+}
+
+.nav-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: #ff6fa8;
+}
+
+/* Botón hamburguesa */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: white;
+        width: 180px;
+        flex-direction: column;
+        padding: 15px;
+        gap: 20px;
+        border-left: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        display: none;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* ===== RESET ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f7f5f2;
+    color: #2b2b2b;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* MÁRGENES EDITORIALES */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Títulos tipo revista */
+.big-title {
+    font-family: "bonita2";
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+/* BOTÓN ESTILO EJEMPLO */
+.btn-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: #111;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* ============================= */
+/* ======== PORTADA ============ */
+/* ============================= */
+
+#hero {
+    padding: 90px 0;
+    text-align: left;
+    position: relative;
+}
+
+#hero .hero-img {
+    width: 430px;
+    max-width: 90%;
+    margin-top: 30px;
+}
+
+/* Letras gigantes detrás */
+.hero-bg-text {
+    position: absolute;
+    font-family: "Playfair Display", serif;
+    font-size: 10rem;
+    color: #f0cbe2;
+    z-index: -1;
+    top: 50px;
+    left: -20px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* ============================= */
+/* ======== ABOUT ME =========== */
+/* ============================= */
+
+#about {
+    padding: 120px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+#about img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(15%);
+}
+
+#about .text h2 {
+    font-family: "bonita2";
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* ===== TIMELINE / SKILLS ===== */
+/* ============================= */
+
+#skills { 
+    text-align: justify;
+
+    padding: 120px 0;
+}
+#skills h3{font-family: "bonita2";
+
+}
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.columns h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+/* Barras suaves */
+.skill-bar {
+    height: 6px;
+    border-radius: 5px;
+    background: #ddd;
+    margin-bottom: 10px;
+}
+
+.fill {
+    height: 100%;
+    background: #f0a3c3;
+    border-radius: 5px;
+}
+
+/* ============================= */
+/* ========== WORK ============= */
+/* ============================= */
+
+#overlay { position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.45);
+backdrop-filter: blur(34px);
+display: none;
+z-index: 500;
+pointer-events: none;
+transition: 0.3s ease;}
+
+.gallery1, .gallery2, .gallery3, .gallery4 {
+    width: 100%;
+  height: calc(50% / 10px);
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  margin: 0 10px;
+  display: fixed;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, background-color 0.3s, filter 0.3s;
+  position: relative;
+  z-index: 400;
+  cursor: pointer;
+}
+
+.gallery1:hover, .gallery2:hover, .gallery3:hover, .gallery4:hover {
+  transform: scale(1.1);
+  background-color: rgba(255,255,255,0.85);
+  z-index: 510;
+}
+
+#work {
+    padding: 120px 0;
+}
+
+.container1{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 1500px;
+    gap: 10px;
+    margin: auto;
+    padding: 50px 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    
+    
+}
+.big-title {align-items:center;}
+.gallery1 {
+    display: fixed;
+    width: 100%;
+    gap: 20px;
+    width: calc(50% - 10px);
+    height: 500px; 
+            margin: 0 10px; 
+            background: rgba(255, 255, 255, 0.1); 
+            border-radius: 10px; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            padding: 20px; 
+            box-sizing: border-box; 
+            transition: transform 0.15; 
+            cursor: pointer;
+            position: relative;
+            z-index: 400; }
+
+.gallery1:hover {transform: scale(1.1);}
+
+.gallery1 img {
+    
+    border-radius: 6px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.gallery2 {
+    display:fixed;
+    grid-column: auto;
+    gap: 35px;
+width: calc(50% - 10px);
+}
+.gallery2:hover {transform: scale(1.1);}
+.gallery2 img {
+    
+    border-radius: 6px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.gallery3 {
+    display: fixed;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+width: calc(50% - 10px);
+}
+.gallery3:hover {transform: scale(1.1);}
+.gallery3 img {
+    
+    border-radius: 6px;
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+}
+
+.gallery4 {
+    display: fixed;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+ width: calc(50% - 10px);
+}
+.gallery4:hover {transform: scale(1.1);}
+.gallery4 img {
+   
+    border-radius: 6px;
+    object-fit: cover;
+    width: 100%;
+    height: 550px;
+    display: block;
+    border-radius: 6px;
+}
+
+
+
+/* FOOTER */
+footer {
+    padding: 80px 0;
+    text-align: center;
+    font-size: 1rem;
+    opacity: 0.6;
+}
+
+@media(max-width: 850px) {
+    #about {
+        grid-template-columns: 1fr;
+    }
+    .columns {
+        grid-template-columns: 1fr;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .big-title {
+        font-size: 2.8rem;
+    }
+}
+.hero {
+    background: #efe9e2; /* Beige claro interno */
+    width: 80%;
+    margin: 40px auto;
+    padding: 40px;
+    position: relative;
+    min-height: 500px;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    position: relative;
+}
+
+/* Estilo manuscrito */
+.text-top,
+.text-middle {
+    font-family: "bonita2";
+    font-size: 22px;
+    color: #222;
+    position: absolute;
+}
+
+.text-top.left {
+    top: 20px;
+    left: 20px;
+}
+
+.text-top.right {
+    top: 20px;
+    right: 20px;
+}
+
+.text-middle {
+    top: 150px;
+    left: 140px;
+}
+
+/* Nombre enorme rosa */
+.big-name {
+    font-size: 150px;
+    line-height: 120px;
+    font-weight: 900;
+    color: rgba(255, 138, 186, 0.45); /* Rosa traslúcido */
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* Foto recortada */
+.hero-photo {
+    position: absolute;
+    top: 110px;
+    left: 50%;
+    
+    transform:translate(-50%,-40%);
+    width: 300px;
+    z-index: 10;
+}
+
+/* Texto inferior */
+.bottom-left,
+.bottom-right {
+    position: absolute;
+    bottom: 20px;
+    font-size: 14px;
+    color: #333;
+}
+
+.bottom-left {
+    left: 20px;
+}
+
+
+.bottom-right {
+    right: 20px;
+}
+  @font-face {
+      font-family: 'bolita';
+      src: url('img/CherryBombOne-Regular.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+       @font-face {
+      font-family:'bonita';
+      src: url('img/Montserrat-Italic-VariableFont_wght.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+     @font-face {
+      font-family:'bonita2';
+      src: url('img/Montserrat-VariableFont_wght.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+        #hero p {
+            font-size: 1.5rem;
+            margin: 20px 0;
+            color: #ffffff;
+        }
